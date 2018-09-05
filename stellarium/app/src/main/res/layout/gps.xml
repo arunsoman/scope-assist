@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="c.a.sm.MainActivity">
+
+    <TextView
+        android:id="@+id/gps_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Details!"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gps_title">
+
+        <TextView
+            android:id="@+id/latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lat" />
+
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lat" />
+
+        <TextView
+            android:id="@+id/altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lat" />
+
+        <TextView
+            android:id="@+id/currentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lat" />
+
+        <TextView
+            android:id="@+id/accuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lat" />
+
+        <Button
+            android:id="@+id/getGPS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="get gps location" />
+
+        <EditText
+            android:id="@+id/locationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lat" />
+
+        <Button
+            android:id="@+id/updateLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="update location" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

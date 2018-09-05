@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">stellarium</string>
+
+    <string name="latitude_label">Latitude: %f</string>
+    <string name="longitude_label">Longitude: %f</string>
+    <string name="no_location_detected">
+        No location detected. Make sure location is enabled on the device.
+    </string>
+    <string name="permission_denied_explanation">
+        Permission was denied, but is needed for core functionality.
+    </string>
+    <string name="permission_rationale">
+        Location permission is needed for core functionality
+    </string>
+    <string name="settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="label_azimuth_string">Azmiuth:</string>
+    <string name="label_pitch_string">Pitch:</string>
+    <string name="label_roll_string">Roll:</string>
+
+    <!-- String for the orientation values. The %1$.2f part is a placeholder
+     that will be filled in at runtime:
+     %1 is the value to replace
+     $.2f says the value is a float, with two decimal places.  -->
+    <string name="value_format">%1$.2f</string>
+</resources>
