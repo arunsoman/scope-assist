@@ -12,6 +12,8 @@ import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.arunsoman.stellarium.R
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 
 class Level:Fragment(), SensorEventListener  {
@@ -82,6 +84,25 @@ class Level:Fragment(), SensorEventListener  {
         }
     }
 
+
+    fun Double.abs():Double{
+        return Math.abs(this)
+    }
+    fun Int.abs():Int  {return Math.abs(this)}
+
+    fun Float.fromRadToHourMinSec():String{
+        val degress = this*180/Math.PI
+        val hours = degress.toInt()
+        var remains = (degress.abs() - hours.abs())*60
+        val mins = remains.toInt()
+        remains = remains - mins
+        val sec = remains*60
+        val df = DecimalFormat("#.##")
+        df.roundingMode = RoundingMode.CEILING
+        val out = "${hours} : ${mins} : ${df.format(sec.abs())}"
+        return out
+    }
+
     override fun onSensorChanged(sensorEvent: SensorEvent) {
         // The sensor type (as defined in the Sensor class).
         val sensorType = sensorEvent.sensor.type
@@ -142,12 +163,9 @@ class Level:Fragment(), SensorEventListener  {
         }
 
         // Fill in the string placeholders and set the textview text.
-        mTextSensorAzimuth.text = resources.getString(
-                R.string.value_format, azimuth)
-        mTextSensorPitch.text = resources.getString(
-                R.string.value_format, pitch)
-        mTextSensorRoll.text = resources.getString(
-                R.string.value_format, roll)
+        mTextSensorAzimuth.setText(azimuth.fromRadToHourMinSec())
+        mTextSensorPitch.setText(pitch.fromRadToHourMinSec())
+        mTextSensorRoll.setText(roll.fromRadToHourMinSec())
 
         // Reset all spot values to 0. Without this animation artifacts can
         // happen with fast tilts.

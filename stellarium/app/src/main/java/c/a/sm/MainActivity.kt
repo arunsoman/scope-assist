@@ -75,6 +75,7 @@ class PageAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
        map.put(cnt++, Holder("GPS ", Location()))
        map.put(cnt++, Holder("Polaris ", polaris))
        map.put(cnt++, Holder("Target ", SkyObject()))
+       map.put(cnt++, Holder("Orientation ", Orientation()))
     }
 
 
